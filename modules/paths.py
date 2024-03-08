@@ -54,7 +54,7 @@ for d, must_exist, what, options in path_dirs:
             sys.path.insert(0, d)
         elif "sgm" in options:
             # Stable Diffusion XL repo has scripts dir with __init__.py in it which ruins every extension's scripts dir, so we
-            # import sgm and remove it from sys.path so that when a script imports scripts.something, it doesbn't use sgm's scripts dir.
+            # import sgm and remove it from sys.path so that when a script imports scripts.something, it doesn't use sgm's scripts dir.
 
             sys.path.insert(0, d)
             import sgm  # noqa: F401
